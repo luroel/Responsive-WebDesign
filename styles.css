@@ -15,6 +15,17 @@ body, header, input, nav, div, ul, li, a, footer {
     padding: 0;
 }
 
-header {
+.header {
     background-color: #fff;
+    /* definir un container flex */
+    display: flex;
+    
 }
+
+.header__logo {
+    /* Maxima resolucion sea 100% */
+    max-width: 100%;
+    /* Darle tam 64px */
+    width: 64px;
+}
+
