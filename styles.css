@@ -1,0 +1,20 @@
+* {
+    /* Tener tamaños reales */
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e2eaff;
+    color: #101632dd;
+}
+
+body, header, input, nav, div, ul, li, a, footer {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+}
