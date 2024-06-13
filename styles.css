@@ -81,8 +81,12 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 
 .header__nav-item a {
-    text-decoration: none;
     color: #48e;
+}
+
+/* Efecto cuando seleccionamos nos deje la decoracion texto */
+.header__nav-list a:not(:hover) {
+    text-decoration: none;
 }
 
 /* -------------- Header queries */
