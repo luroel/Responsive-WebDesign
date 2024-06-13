@@ -28,10 +28,6 @@ body, header, input, nav, div, ul, li, a, footer {
 /* por defecto para hacer check y menu apararezca y desaparezca */
 .header__nav {
     display: none;
-}
-
-.header__checkbox:checked ~ .header__nav {
-    display: block;
     background-color: #fff;
     /* temporal para que no estorbar */
     position: absolute;
@@ -40,7 +36,10 @@ body, header, input, nav, div, ul, li, a, footer {
     height: 100vh;
     top: 0;
     z-index: -1;
-    
+}
+
+.header__checkbox:checked ~ .header__nav {
+    display: block;
 }
 
 .header__checkbox {
