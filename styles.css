@@ -25,6 +25,16 @@ body, header, input, nav, div, ul, li, a, footer {
     
 }
 
+/* por defecto para hacer check y menu apararezca y desaparezca */
+.header-nav {
+    display: none;
+}
+
+.header__checkbox {
+    /* quitar el elemento */
+    display: none;
+}
+
 .header__open-nav-button {
     color: #48e;
     font-size: 3rem;
@@ -32,6 +42,8 @@ body, header, input, nav, div, ul, li, a, footer {
     font-weight: 600px;
     /* Temporal para que no nos estorbe el elemento */
     position: absolute;
+    /* mandar elementos derecha por el momento */
+    right: 10px;
 }
 .header__logo {
     /* Maxima resolucion sea 100% */
@@ -40,6 +52,5 @@ body, header, input, nav, div, ul, li, a, footer {
     width: 64px;
     /* 10px arriba-abajo 20px costados */
     margin: 10px 20px;
-
 }
 
