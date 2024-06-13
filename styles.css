@@ -15,6 +15,7 @@ body, header, input, nav, div, ul, li, a, footer {
     padding: 0;
 }
 
+/* ----------- Header section */
 .header {
     background-color: #fff;
     /* definir un container flex */
@@ -35,11 +36,20 @@ body, header, input, nav, div, ul, li, a, footer {
     width: 100vw;
     height: 100vh;
     top: 0;
+    /* Para no tapar logo maerks */
     z-index: -1;
 }
 
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-around;
+}
+
 .header__checkbox:checked ~ .header__nav {
-    display: block;
+    display: flex;
 }
 
 .header__checkbox {
@@ -66,3 +76,15 @@ body, header, input, nav, div, ul, li, a, footer {
     margin: 10px 20px;
 }
 
+.header__nav-list {
+    list-style: none;
+}
+
+.header__nav-item a {
+    text-decoration: none;
+    color: #48e;
+}
+
+/* -------------- Header queries */
+
+/* -------------- Header ends */
