@@ -19,13 +19,27 @@ body, header, input, nav, div, ul, li, a, footer {
     background-color: #fff;
     /* definir un container flex */
     display: flex;
+    /* Acomodar elementos */
+    justify-content: space-between;
+    align-items: center;
     
 }
 
+.header__open-nav-button {
+    color: #48e;
+    font-size: 3rem;
+    padding: 20px;
+    font-weight: 600px;
+    /* Temporal para que no nos estorbe el elemento */
+    position: absolute;
+}
 .header__logo {
     /* Maxima resolucion sea 100% */
     max-width: 100%;
     /* Darle tam 64px */
     width: 64px;
+    /* 10px arriba-abajo 20px costados */
+    margin: 10px 20px;
+
 }
 
