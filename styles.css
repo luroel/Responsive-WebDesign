@@ -23,6 +23,9 @@ body, header, input, nav, div, ul, li, a, footer {
     /* Acomodar elementos */
     justify-content: space-between;
     align-items: center;
+    /* Trabajar con queries y definirlos */
+    container-type: inline-size;
+    container-name: header;
     
 }
 
@@ -85,10 +88,29 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 
 /* Efecto cuando seleccionamos nos deje la decoracion texto */
-.header__nav-list a:not(:hover) {
+/* Si a no esta en seleccion o activo quitar la decoracion del texto */
+.header__nav-list a:not(:is(:hover,:active)) {
     text-decoration: none;
 }
 
 /* -------------- Header queries */
 
+@container header (min-width: 600px){
+    .header__nav {
+        /* sacar contenedor del position: absolute y siga con el flujo de la pagina */
+        position: static;
+        /* altura al contenido */
+        height: auto;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+}
 /* -------------- Header ends */
