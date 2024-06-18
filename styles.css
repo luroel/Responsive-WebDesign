@@ -52,6 +52,7 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 
 .header__checkbox:checked ~ .header__nav {
+    /* Para dar un margin auto en .header__nav-list */
     display: flex;
 }
 
@@ -97,15 +98,24 @@ body, header, input, nav, div, ul, li, a, footer {
 
 @container header (min-width: 600px){
     .header__nav {
+        /* Para que no desaparezcan los links cuando estiramos y perdemos la resolucion y deje en bloque */
+        display: block;
         /* sacar contenedor del position: absolute y siga con el flujo de la pagina */
         position: static;
         /* altura al contenido */
+
         height: auto;
+        width: auto;
+        justify-content: space-between;
+        
     }
 
     .header__nav-list {
         flex-direction: row;
         height: auto;
+        width: auto;
+        gap: 20px;
+        margin-right: 40px;
 
     }
 
