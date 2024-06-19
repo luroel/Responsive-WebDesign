@@ -126,3 +126,89 @@ body, header, input, nav, div, ul, li, a, footer {
 /* -------------- Header ends */
 
 /* -------------- PROFILE SECTION */
+/* contenedor papa de todos */
+.profile__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.profile__img-container {
+    /* dando estilo al contenedor */
+    max-height: 500px;
+    /* para que la img haga un efecto de meterse y agrandarse en el div */
+    overflow: hidden;
+
+}
+
+.profile__img {
+    max-width: 100%;
+    /* Su tam sea 600px */
+    width: 720px;
+}
+
+.profile__data-container {
+    max-width: 600px;
+    padding: 12px;
+}
+
+h1 {
+    color: #26a;
+}
+
+.profile__skills-container h2 {
+    color: #26a;
+}
+
+.profile__skills {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    max-width: 600px;
+    margin-left: 0;
+    align-items: center;
+}
+
+.load-bar {
+    border: 2px solid #48e;
+    border-radius: 8px;
+    color: #fff;
+    padding: 2px;
+    font-size: 12px;
+    width: 80%;
+    margin: 4px;
+    margin-left: 0;
+}
+
+.load__bar-bar {
+    border: 2px solid #48e;
+    background-color: #48e;
+    border-radius: 4px 6px;
+
+    /* width: 70%; */
+}
+
+.bar--80 {
+    width: 80%;
+}
+
+.bar--70 {
+    width: 70%;
+}
+
+.bar--60 {
+    width: 60%; 
+}
+
+.bar--75 {
+    width: 75%;
+}
+
+.bar--90 {
+    width: 90%;
+}
+
+.profile__skill-name {
+    color: #48e;
+}
