@@ -129,6 +129,7 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 /* -------------- Header ends */
 
+
 /* -------------- PROFILE SECTION */
 /* volverlo contenedor para trabajar media queries */
 .profile {
@@ -224,7 +225,7 @@ h1 {
     color: #48e;
 }
 
-/* PROFILE QUERIES ---------------------- */
+/* -------------------PROFILE QUERIES ---------------------- */
 @container profile (min-width: 720px) {
     .profile__wrapper {
         flex-direction: row;
@@ -272,8 +273,8 @@ h1 {
     }
 
 }
-
 /* ------------------------------PROFILE ENDS---------------------------------- */
+
 
 /* ------------------------------PORFOLIO SECTION------------------------------ */
 
@@ -357,3 +358,58 @@ h1 {
         grid-column: span 4;
     }
 }
+
+/* ------------------------------PORFOLIO ENDS------------------------------ */
+
+
+/* ------------------------------CONTACT SECTION----------------------- */
+
+.form {
+    /* definir la altura minima del form */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* esto alinea todo los elementos al centro */
+    align-items: center;
+    padding: 30px 0;
+    /* padding: 30px; */
+    container-name: form;
+    container-type: inline-size;
+}
+
+form_form {
+    /* flex: 1; */
+    font-size: 16px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 9px 6px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+.form__input-container textarea {
+    /* no redimensiona para ningun lado */
+    resize: none;
+    min-height: 120px;
+    /* herede la letra si no carga monserrat */
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"] {
+    padding: 12px;
+    background-color: #18233f;
+    color: #fff;
+}
+/* ------------------------------CONTACT QUERIES------------------------------ */
+
+
+
+/* ------------------------------CONTACT ENDS------------------------------ */
