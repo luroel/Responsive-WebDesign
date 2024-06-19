@@ -282,10 +282,12 @@ h1 {
     text-align: center;
     container-name: portfolio;
     container-type: inline-size;
+    justify-content: space-evenly;
 }
 
 .portfolio__title {
     font-size: 3rem;
+    margin-bottom: 0;
 }
 
 .portfolio__project-container {
@@ -300,7 +302,7 @@ h1 {
     gap: 12px;
     padding: 12px;
     /* al momento de crecer se adapte CHECK */
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .portfolio__project {
@@ -319,7 +321,35 @@ h1 {
 }
 
 /* ------------------------------PORFOLIO QUERIES------------------------------ */
+/* minwidth 900px */
+@container portfolio (min-width:56.25rem) {
+    .portfolio__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 
-@container portfolio {
-    
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 2;
+    }
+}
+
+/* minwidth 1300px /16 para rem */
+@container portfolio (min-width:81.25rem) {
+    .portfolio__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 4;
+    }
 }
