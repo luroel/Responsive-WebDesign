@@ -280,6 +280,12 @@ h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+}
+
+.portfolio__title {
+    font-size: 3rem;
 }
 
 .portfolio__project-container {
@@ -298,14 +304,22 @@ h1 {
 }
 
 .portfolio__project {
-    background-image: url("Luigi.JPG");
+    /* darle opasidad al fondo */
+    background-image: linear-gradient(#0009, #0009 ), url("Luigi.JPG");
     background-position: center;
     background-size: cover;
     /* Centrar elementos usando grid */
     display: grid;
     place-content: center;
-
 }
 
+.portfolio__project:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff6;
+}
 
 /* ------------------------------PORFOLIO QUERIES------------------------------ */
+
+@container portfolio {
+    
+}
