@@ -26,7 +26,11 @@ body, header, input, nav, div, ul, li, a, footer {
     /* Trabajar con queries y definirlos */
     container-type: inline-size;
     container-name: header;
-    
+    /* arreglando el nav button mobile */
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 20px;
 }
 
 /* por defecto para hacer check y menu apararezca y desaparezca */
