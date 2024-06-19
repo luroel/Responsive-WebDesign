@@ -268,3 +268,44 @@ h1 {
     }
 
 }
+
+/* ------------------------------PROFILE ENDS---------------------------------- */
+
+/* ------------------------------PORFOLIO SECTION------------------------------ */
+
+.portfolio {
+    background-color: #18233f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.portfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    /* centrar elementos al estirar la resolucion */
+    margin: auto;
+    /* estirar imgs a su max resol */
+    width: 100%;
+    /* tecnica separar entre elementos y los bordes */
+    gap: 12px;
+    padding: 12px;
+    /* al momento de crecer se adapte CHECK */
+    min-height: 90vh;
+}
+
+.portfolio__project {
+    background-image: url("Luigi.JPG");
+    background-position: center;
+    background-size: cover;
+    /* Centrar elementos usando grid */
+    display: grid;
+    place-content: center;
+
+}
+
+
+/* ------------------------------PORFOLIO QUERIES------------------------------ */
