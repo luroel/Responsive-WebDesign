@@ -378,7 +378,7 @@ h1 {
     container-type: inline-size;
 }
 
-form_form {
+.form_form {
     /* flex: 1; */
     font-size: 16px;
     max-width: 600px;
