@@ -378,11 +378,12 @@ h1 {
     container-type: inline-size;
 }
 
-.form_form {
+.form__form {
     /* flex: 1; */
     font-size: 16px;
     max-width: 600px;
     width: 100%;
+    display: grid;
 }
 
 .form__input-container :is(input,textarea) {
@@ -410,6 +411,15 @@ h1 {
 }
 /* ------------------------------CONTACT QUERIES------------------------------ */
 
+@container form (min-width:56.25rem){
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname""
+        "email email"
+        "message message";
 
+    }
+}
 
 /* ------------------------------CONTACT ENDS------------------------------ */
