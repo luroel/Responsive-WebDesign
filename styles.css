@@ -318,6 +318,7 @@ h1 {
     /* Centrar elementos usando grid */
     display: grid;
     place-content: center;
+    border-radius: 8px;
 }
 
 .portfolio__project:hover {
@@ -330,7 +331,6 @@ h1 {
 @container portfolio (min-width:56.25rem) {
     .portfolio__project-container{
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
     }
 
     .portfolio__project:first-child{
@@ -388,7 +388,7 @@ h1 {
 
 .form__input-container :is(input,textarea) {
     width: 100%;
-    padding: 9px 6px;
+    padding: 9px;
     font-size: 16px;
     margin: 4px;
     border: none;
@@ -409,6 +409,12 @@ h1 {
     background-color: #18233f;
     color: #fff;
 }
+
+.form__title {
+    font-size: 2.4rem;
+}
+
+
 /* ------------------------------CONTACT QUERIES------------------------------ */
 
 @container form (min-width:56.25rem){
@@ -417,9 +423,40 @@ h1 {
         grid-template-areas: 
         "name lastname""
         "email email"
-        "message message";
+        "message message"
+        "button button";
+
+        gap: 12px;
+        background-image: radial-gradient(#18233f06,#18233f22);
+        box-shadow: 0px 0px 40px #0004;
+        padding: 30px;
+        border-radius: 12px;
 
     }
-}
 
+    .form__form:first-child {
+        grid-area: name;
+    }
+
+    .form__form:nth-child(2) {
+        grid-area: lastname;
+    }
+
+    .form__form:nth-child(3) {
+        grid-area: email;
+    }
+
+    .form__form:nth-child(4) {
+        grid-area: message;
+    }
+
+    .form__form:nth-child(5) {
+        grid-area: button;
+    }
+
+    .form__input-container :is(input,textarea) {
+        box-shadow: none;
+        border-radius: 4px;
+    }
+}
 /* ------------------------------CONTACT ENDS------------------------------ */
