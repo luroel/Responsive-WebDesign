@@ -24,14 +24,12 @@ body, header, input, nav, div, ul, li, a, footer {
     /* Acomodar elementos */
     justify-content: space-between;
     align-items: center;
-    /* Trabajar con queries y definirlos */
-    container-type: inline-size;
-    container-name: header;
     /* arreglando el nav button mobile */
     position: relative;
     z-index: 10;
     text-align: center;
     font-size: 20px;
+    color: #48e;
 }
 
 /* por defecto para hacer check y menu apararezca y desaparezca */
@@ -90,7 +88,7 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 
 .header__nav-item a {
-    color: #48e;
+    color: inherit;
 }
 
 /* Efecto cuando seleccionamos nos deje la decoracion texto */
@@ -101,7 +99,17 @@ body, header, input, nav, div, ul, li, a, footer {
 
 /* -------------- Header queries */
 
-@container header (min-width: 600px){
+@media screen and (min-width: 600px){
+    .header {
+        padding: 20px 0;
+        animation: header-movement both;
+        animation-timeline: scroll();
+        position: sticky;
+        top: 0;
+        animation-range: 10px 100px;
+    }
+
+
     .header__nav {
         /* Para que no desaparezcan los links cuando estiramos y perdemos la resolucion y deje en bloque */
         display: block;
@@ -112,6 +120,7 @@ body, header, input, nav, div, ul, li, a, footer {
         height: auto;
         width: auto;
         justify-content: space-between;
+        background-color: initial;
         
     }
 
@@ -130,12 +139,42 @@ body, header, input, nav, div, ul, li, a, footer {
 }
 /* -------------- Header ends */
 
+/*--------------- Header animation */
+
+@keyframes header-movement {
+    from {
+        padding: 20px 0;
+        background-color: #fff;
+    }
+
+    to {
+        padding: 20px 0;
+        background-color: #10163266;
+        color: #fff
+        ;
+    } 
+}
+
+@keyframes header-apparence {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    } 
+}
+
+/*--------------- Header animation end */
+
+
 
 /* -------------- PROFILE SECTION */
 /* volverlo contenedor para trabajar media queries */
 .profile {
     container-name: profile;
     container-type: inline-size;
+    animation: header-apparence 2.4s -.6s both;
 }
 
 /* contenedor papa de todos */
@@ -166,9 +205,17 @@ body, header, input, nav, div, ul, li, a, footer {
     padding: 12px;
 }
 
+
 h1 {
     color: #26a;
 }
+
+
+/* Profile Text animation */
+
+
+
+/* End Profile Text Animation */
 
 .profile__skills-container h2 {
     color: #26a;
@@ -286,8 +333,11 @@ h1 {
     /* width: 90%; */
     animation-name: full-bar-90;
     animation-duration: 5s;
-    animation-fill-mode: forwards;
+    /* Conserva estado final */
+    animation-fill-mode: forwards; 
 }
+
+/*------------------------------- End Profile Animation Section ---------------------------*/
 
 .profile__skill-name {
     color: #48e;
@@ -379,9 +429,14 @@ h1 {
     min-height: 80vh;
 }
 
+.portfolio__project-container a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .portfolio__project {
     /* darle opasidad al fondo */
-    background-image: linear-gradient(#0009, #0009 ), url("Luigi.JPG");
+    background-image: linear-gradient(#0009, #0009 );
     background-position: center;
     background-size: cover;
     /* Centrar elementos usando grid */
@@ -389,6 +444,19 @@ h1 {
     place-content: center;
     border-radius: 8px;
 }
+
+.project-img1{
+    background-image: url('clusters.png');
+}
+
+.portfolio__project-img2 {
+    background-image: url('abl-img.png');
+}
+
+.portfolio__project-img3, .portfolio__project-img4, .portfolio__project-img5 {
+    background-image: url('progress.jpeg');
+}
+
 
 .portfolio__project:hover {
     opacity: 0.74;
