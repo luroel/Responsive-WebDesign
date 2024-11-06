@@ -432,6 +432,8 @@ h1 {
 .portfolio__project-container a {
     text-decoration: none;
     color: #fff;
+    background-color: black;
+    border-radius: 50%;
 }
 
 .portfolio__project {
@@ -451,9 +453,15 @@ h1 {
 
 .portfolio__project-img2 {
     background-image: url('abl-img.png');
+    /* opacity: 0.5; */
 }
 
-.portfolio__project-img3, .portfolio__project-img4, .portfolio__project-img5 {
+.portfolio__project-img3 {
+    background-image: url('nutri-label.png');
+    /* opacity: 0.5; */
+}
+
+.portfolio__project-img4, .portfolio__project-img5 {
     background-image: url('progress.jpeg');
 }
 
